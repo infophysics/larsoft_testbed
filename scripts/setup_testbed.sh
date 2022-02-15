@@ -5,3 +5,5 @@ INSTALL_DIRECTORY=/dune/app/users/$USER/LArSoftTestbedInstall
 
 cd $INSTALL_DIRECTORY
 source localProducts*/setup
+
+cd $LARSOFT_TESTBED_DIR
