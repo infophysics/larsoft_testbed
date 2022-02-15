@@ -20,4 +20,8 @@ source localProducts*/setup
 cd $MRB_SOURCE
 mrb g -t $DUNETPC_VERSION dunetpc
 
+cd $MRB_BUILDDIR
+mrbsetenv
+mrb install -j 32 --generator ninja
+
 cd $LARSOFT_TESTBED_DIR
