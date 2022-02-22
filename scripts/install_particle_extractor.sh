@@ -21,5 +21,6 @@ mrbsetenv
 mrb install -j 32 --generator ninja
 
 cp $GEOMETRY_PATH/geometry_dune.fcl $MRB_INSTALL/dunetpc/$LARSOFT_VERSION/job/
+export FW_SEARCH_PATH="$FW_SEARCH_PATH:$GEOMETRY_PATH"
 export FHICL_FILE_PATH="$FHICL_FILE_PATH:$GEOMETRY_PATH"
 cd $LARSOFT_TESTBED_DIR
