@@ -16,4 +16,6 @@ git pull
 
 ninja -C $MRB_BUILDDIR -j 32 install
 
+cp $GEOMETRY_PATH/geometry_dune.fcl $MRB_INSTALL/dunetpc/$LARSOFT_VERSION/job/
+
 cd $LARSOFT_TESTBED_DIR

@@ -33,4 +33,6 @@ cd $MRB_BUILDDIR
 mrbsetenv
 mrb install -j 32 --generator ninja
 
+cp $GEOMETRY_PATH/geometry_dune.fcl $MRB_INSTALL/dunetpc/$LARSOFT_VERSION/job/
+
 cd $LARSOFT_TESTBED_DIR
