@@ -9,7 +9,7 @@ done
 export LARSOFT_TESTBED_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )/../"
 
 source $LARSOFT_TESTBED_DIR/scripts/setup_testbed.sh
-
+GEOMETRY_PATH=$LARSOFT_TESTBED_DIR/geometry/
 cd $MRB_SOURCE/dunetpc/dune/
 
 git clone https://github.com/UC-Davis-Machine-Learning/ParticleExtractor.git
