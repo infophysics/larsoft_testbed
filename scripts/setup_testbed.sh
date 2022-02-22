@@ -23,5 +23,5 @@ cd $INSTALL_DIRECTORY
 source localProducts*/setup
 
 cp $GEOMETRY_PATH/geometry_dune.fcl $MRB_INSTALL/dunetpc/$LARSOFT_VERSION/job/
-
+export FHICL_FILE_PATH="$FHICL_FILE_PATH:$GEOMETRY_PATH"
 cd $LARSOFT_TESTBED_DIR
