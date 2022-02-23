@@ -1,5 +1,4 @@
 #include "prodgenie_nu_dune10kt.fcl"
-#include "geometry_dune.fcl"
 #include "LArG4_dune.fcl"
 #include "IonAndScint_dune.fcl"
 #include "PDFastSim_dune.fcl"
