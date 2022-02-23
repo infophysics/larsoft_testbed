@@ -1,0 +1,19 @@
+#include "prodgenie_nu_dune10kt.fcl"
+#include "singles_dune.fcl"
+#include "textfilegen.fcl"
+#include "corsika_protodune.fcl"
+#include "dune_radiological_model.fcl"
+#include "geometry_dune.fcl"
+
+process_name: GenieTDA
+
+outputs.out1.fileName: "prodgenie_nu_dune10kt_1x2x6_gen.root"
+physics.producers.generator: @local::dune_fd_genie_nu_simple_flux_1x2x6_window
+
+services:
+{
+    @table::services
+    @table::dunefd_1x2x6_services
+}
+
+source.firstRun: 20000001
