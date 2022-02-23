@@ -45,7 +45,7 @@ physics.analyzers.ana.FillMCNeutronCaptures:  false
 physics.analyzers.ana.FillMCEnergyDeposits:   true
 physics.analyzers.ana.MCEdepBoundingBox:      "TPC"
 physics.analyzers.ana.MCEdepPDGCodes:         [11, 13, 111, 211, 2212]
-physics.analyzers.ana.MCEdepPDGLevels:        ["parent_electrons", "parent_electrons", "electrons", "parent_electrons", "parent_electrons"]
+physics.analyzers.ana.MCEdepPDGLevels:        ["parent", "parent", "electrons", "parent", "parent"]
 physics.analyzers.ana.MCEdepEnergyCutoff:     0.0
 
 physics.analyzers.ana.FillMCVoxels:           false
