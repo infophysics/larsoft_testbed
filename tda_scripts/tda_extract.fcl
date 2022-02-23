@@ -29,6 +29,18 @@ physics:
     end_paths: [ analysis ]
 }
 
+outputs:
+{
+    out1:
+    {
+        module_type:        RootOutput
+        fileName:           "prodgenie_nu_dune10kt_1x2x6_output.root"
+        dataTier:           "generated"
+        compressionLevel:   1
+        outputCommands:     [ "keep *" ]
+    }
+}
+
 physics.analyzers.ana.FillMCNeutronCaptures:  false
 
 physics.analyzers.ana.FillMCEnergyDeposits:   true
