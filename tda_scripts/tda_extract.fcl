@@ -5,6 +5,7 @@ process_name: GenieTDAExtract
 
 services:
 {
+    TFileService:   { fileName: "output.root" }
     @table::services
     @table::dunefd_1x2x6_simulation_services_refactored
 }
@@ -35,3 +36,4 @@ physics.analyzers.ana.MCEdepPDGLevels:        ["parent_electrons", "parent_elect
 physics.analyzers.ana.MCEdepEnergyCutoff:     0.0
 
 physics.analyzers.ana.FillMCVoxels:           false
+physics.analyzers.ana.MCEdepPDGCodes:         [11, 13, 111, 211, 2212]
