@@ -1,4 +1,5 @@
 #include "ParticleExtractor.fcl"
+#include "simulationservices_dune.fcl"
 #include "services_dune.fcl"
 
 process_name: GenieTDAExtract
@@ -6,7 +7,6 @@ process_name: GenieTDAExtract
 services:
 {
     TFileService:   { fileName: "output.root" }
-    @table::services
     @table::dunefd_1x2x6_simulation_services_refactored
     FileCatalogMetadata:    @local::art_file_catalog_mc
 }
