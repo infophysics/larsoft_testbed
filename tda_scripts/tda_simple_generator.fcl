@@ -11,5 +11,5 @@ services:
     @table::dunefd_1x2x6_services
 }
 
-source.firstRun: 0
+#source.firstRun: 0
 source.maxEvents:   100
