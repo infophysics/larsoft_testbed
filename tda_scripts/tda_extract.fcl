@@ -1,0 +1,37 @@
+#include "ParticleExtractor.fcl"
+#include "standard_g4_dune10kt_refactored.fcl"
+
+process_name: GenieTDAExtract
+
+services:
+{
+    @table::services
+    @table::dunefd_1x2x6_simulation_services_refactored
+}
+
+source:
+{
+    module_type:    RootInput
+    maxEvents:      50
+    fileNames:      [ "prodgenie_nu_dune10kt_1x2x6_g4.root" ]
+}
+
+physics:
+{
+    analyzers:
+    {
+        ana: @local::ParticleExtractor
+    }
+    analysis:  [ ana ]
+    end_paths: [ analysis ]
+}
+
+physics.analyzers.ana.FillMCNeutronCaptures:  false
+
+physics.analyzers.ana.FillMCEnergyDeposits:   true
+physics.analyzers.ana.MCEdepBoundingBox:      "TPC"
+physics.analyzers.ana.MCEdepPDGCodes:         [11, 13, 111, 211, 2212]
+physics.analyzers.ana.MCEdepPDGLevels:        ["parent_electrons", "parent_electrons", "electrons", "parent_electrons", "parent_electrons"]
+physics.analyzers.ana.MCEdepEnergyCutoff:     0.0
+
+physics.analyzers.ana.FillMCVoxels:           false
